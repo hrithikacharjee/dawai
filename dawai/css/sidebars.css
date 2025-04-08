@@ -1,0 +1,334 @@
+/* ========== Pincode Sidebar ========== */
+.sidebar-background {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sidebar-background > div {
+    display: none;
+    margin-left: auto;
+    width: 420px;
+    height: 100%;
+    background-color: white;
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+.pincode-sidebar h1 {
+    font-size: 26px;
+    margin: 20px 0;
+}
+.pincode-sidebar form {
+    display: flex;
+    border-radius: 7px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px var(--main-color) solid;
+}
+.pincode-sidebar form input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.pincode-sidebar form input[type="number"] {
+    width: 100%;
+}
+.pincode-sidebar form input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pincode-sidebar > div {
+    display: flex;
+    align-items: center;
+    border: 1px lightgrey solid;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+.pincode-sidebar > div img {
+    height: 40px;
+    margin-right: 15px;
+}
+.pincode-sidebar > div h3 {
+    color: var(--main-color);
+}
+.pincode-sidebar > div a {
+    margin-left: 10px;
+    color: rgb(0, 162, 255);
+    text-decoration: none;
+}
+.pincode-sidebar > div:nth-child(5) {
+    background-color: rgb(240, 240, 240);
+    border: none;
+}
+
+.pincode-sidebar > div:nth-child(6) {
+    background-color: rgb(227, 242, 255);
+    border: none;
+    font-size: 14px;
+}
+.pincode-sidebar > div:nth-child(5) img {
+    height: 30px;
+}
+
+.close {
+    font-size: 25px;
+    cursor: pointer;
+}
+/* --------------- Login Sidebar -------------- */
+
+.sidebar-background {
+    position: fixed; /* To cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's on top of other content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, right 0.3s ease-in-out;
+    right: -100%; /* Initially hidden off-screen */
+}
+
+.sidebar-background.open {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
+
+.login-sidebar {
+    width: 350px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Position within the sidebar-background */
+    top: 0;
+    right: -350px; /* Initially hidden */
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1001; /* Ensure it's above the background */
+}
+
+.login-sidebar.open {
+    right: 0;
+}
+
+.login-sidebar > div:first-child {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.login-sidebar > div:first-child img {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.login-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.login-form, .register-form {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form h3, .register-form h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.login-form form, .register-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form form div, .register-form form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login-form form label, .register-form form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form form input[type="text"],
+.login-form form input[type="password"],
+.register-form form input[type="text"],
+.register-form form input[type="email"],
+.register-form form input[type="password"],
+.register-form form input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-form form input[type="submit"],
+.register-form form input[type="submit"] {
+    padding: 12px 15px;
+    background-color: var(--main-color); /* Use your main color variable */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form form input[type="submit"]:hover,
+.register-form form input[type="submit"]:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+.toggle-form {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.toggle-form span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.toggle-form span:hover {
+    text-decoration: underline;
+}
+
+.login-sidebar p {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* --------------- Pincode Sidebar (Existing Styles - Keep These) -------------- */
+
+.pincode-sidebar {
+    position: absolute;
+    top: 0;
+    right: -300px; /* Adjust as needed */
+    width: 300px; /* Adjust as needed */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1002; /* Ensure it's above the login sidebar if both are open */
+}
+
+.pincode-sidebar.open {
+    right: 0;
+}
+
+.pincode-sidebar .close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.pincode-sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.pincode-sidebar form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.pincode-sidebar form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.pincode-sidebar form input[type="submit"] {
+    padding: 12px 15px;
+    background-color: var(--main-color); /* Use your main color variable */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pincode-sidebar form input[type="submit"]:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+.pincode-sidebar > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pincode-sidebar > div img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.pincode-sidebar > div h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.pincode-sidebar > div p {
+    font-size: 14px;
+    color: #777;
+}
+
+.pincode-sidebar > div p a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.pincode-sidebar > div p a:hover {
+    text-decoration: underline;
+}
