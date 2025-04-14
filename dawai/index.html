@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PharmEasy clone</title>
+    <title>Dawai</title>
     <link rel="icon" href="assets/Asset 5@3x.png">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -35,10 +35,10 @@
         
 
             <ul>
-                <li id="open_login">
+                <a href="login.html" id="open_login">
                     <i class="fa-regular fa-user"></i>
                     <p>Log In</p>
-                </li>
+                </a>
                 <li>
                     <a href="./offers.html">
                         <i class="fa-regular fa-percent"></i>
@@ -616,65 +616,12 @@
             </div>
         </div>
     
-        <div class="login-sidebar" id="login-sidebar">
-            <div>
-                <img src="assets/Asset 5@3x.png" alt="Login Banner">
-                <img src="assets/medicine2.jpg" alt="Register Banner">
-            </div>
-            <i class="fa-solid fa-xmark login-close"></i>
-    
-            <div class="login-form">
-                <h3>Login</h3>
-                <form id="loginForm">
-                    <div>
-                        <label for="login-email">Email / Username:</label>
-                        <input type="text" id="login-email" placeholder="Enter your email or username" required>
-                    </div>
-                    <div>
-                        <label for="login-password">Password:</label>
-                        <input type="password" id="login-password" placeholder="Enter your password" required>
-                    </div>
-                    <input type="submit" value="Login">
-                </form>
-                <p class="toggle-form" data-target="register-form">New user? <span>Register here</span></p>
-            </div>
-    
-            <div class="register-form" style="display: none;">
-                <h3>Register</h3>
-                <form id="registerForm">
-                    <div>
-                        <label for="register-name">Name:</label>
-                        <input type="text" id="register-name" placeholder="Enter your name" required>
-                    </div>
-                    <div>
-                        <label for="register-email">Email:</label>
-                        <input type="email" id="register-email" placeholder="Enter your email" required>
-                    </div>
-                    <div>
-                        <label for="register-username">Username:</label>
-                        <input type="text" id="register-username" placeholder="Choose a username" required>
-                    </div>
-                    <div>
-                        <label for="register-password">Password:</label>
-                        <input type="password" id="register-password" placeholder="Choose a password" required>
-                    </div>
-                    <div>
-                        <label for="register-confirm-password">Confirm Password:</label>
-                        <input type="password" id="register-confirm-password" placeholder="Confirm your password"
-                            required>
-                    </div>
-                    <input type="submit" value="Register">
-                </form>
-                <p class="toggle-form" data-target="login-form">Already have an account? <span>Login here</span></p>
-            </div>
-    
-            <p>By continuing, you agree with our Privacy Policy</p>
-        </div>
-    </div>
 
 
+  <link rel="stylesheet" href="css/auth.css">
     <script src="script/index.js"></script>
     <script src="script/sidebars.js"></script>
+    <script src="script/auth.js"></script>
 </body>
 
 </html>
