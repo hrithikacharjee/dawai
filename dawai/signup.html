@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawai - Sign Up</title>
+    <link rel="icon" href="assets/Asset 5@3x.png">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="https://kit.fontawesome.com/c0adbb8084.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .auth-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .back-to-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #07a1a1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-to-home">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <div class="auth-container">
+        <div class="auth-form">
+            <img src="assets/Asset 5@3x.png" alt="Dawai Logo" style="height: 60px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
+            <h2>Create Account</h2>
+            <form id="signupForm">
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="name" required>
+                    <!-- Added name="name" -->
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                    <!-- Added name="email" -->
+                </div>
+                
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" minlength="6" required>
+                    <!-- Added name="password" -->
+                </div>
+                
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" name="confirm_password" required>
+                    <!-- Added name="confirm_password" -->
+                </div>
+                
+                <button type="submit" class="auth-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add validation (check if passwords match)
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('signupConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // Add your signup logic here
+            console.log('Signup submitted');
+            window.location.href = 'index.html'; // Redirect after signup
+        });
+    </script>
+</body>
+</html>
